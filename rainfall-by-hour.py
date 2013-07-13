@@ -4,10 +4,10 @@ from calendar import monthrange
 
 
 def fifteen_minutes_before(date):
-    '''For each row, we need to subtract fifteen minutes from the date because we
+    """For each row, we need to subtract fifteen minutes from the date because we
     really want to count each rain measurement for the fifteen minute period before it.
     For example, rain measured at 0:00:00 actually counts towards the amount it rained
-    since 23:45 the previous day.'''
+    since 23:45 the previous day."""
     return (datetime.strptime(date, "%m/%d/%Y %H:%M:%S") -
             timedelta(minutes=15)).timetuple()
 
